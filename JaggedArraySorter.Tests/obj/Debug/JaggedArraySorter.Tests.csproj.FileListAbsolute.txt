@@ -1,0 +1,9 @@
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter.Tests\bin\Debug\JaggedArraySorter.Tests.dll
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter.Tests\bin\Debug\JaggedArraySorter.Tests.pdb
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter.Tests\bin\Debug\JaggedArraySorter.dll
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter.Tests\bin\Debug\nunit.framework.dll
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter.Tests\bin\Debug\JaggedArraySorter.pdb
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter.Tests\bin\Debug\nunit.framework.xml
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter.Tests\obj\Debug\JaggedArraySorter.Tests.csprojResolveAssemblyReference.cache
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter.Tests\obj\Debug\JaggedArraySorter.Tests.dll
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter.Tests\obj\Debug\JaggedArraySorter.Tests.pdb

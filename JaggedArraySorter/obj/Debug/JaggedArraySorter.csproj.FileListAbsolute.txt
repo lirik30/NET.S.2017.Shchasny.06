@@ -1,0 +1,5 @@
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter\bin\Debug\JaggedArraySorter.dll
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter\bin\Debug\JaggedArraySorter.pdb
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter\obj\Debug\JaggedArraySorter.csprojResolveAssemblyReference.cache
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter\obj\Debug\JaggedArraySorter.dll
+c:\users\kiril\documents\visual studio 2017\Projects\NET.S.2017.Shchasny.06\JaggedArraySorter\obj\Debug\JaggedArraySorter.pdb
