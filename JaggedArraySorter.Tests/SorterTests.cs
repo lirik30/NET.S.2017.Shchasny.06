@@ -15,24 +15,23 @@ namespace JaggedArraySorter.Tests
         {
             get
             {
-                yield return new TestCaseData(new []{new []{1, 2, 5}, new [] { 1, 4, -1}, new [] { 10, 4, 11}}, new SumIncrease())
+                yield return new TestCaseData(new []{new []{1, 2, 5}, new [] { 1, 4, -1}, new [] { 10, 4, 11}}, new SumIncreaseComparer())
                     .Returns(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 } , new[] { 10, 4, 11 } });
 
-                yield return new TestCaseData(new[] { new[] { 1, 2, 5 }, new[] { 1, 4, -1 }, new[] { 10, 4, 11 } }, new SumDecrease())
+                yield return new TestCaseData(new[] { new[] { 1, 2, 5 }, new[] { 1, 4, -1 }, new[] { 10, 4, 11 } }, new SumDecreaseComparer())
                     .Returns(new[] { new[] { 10, 4, 11 }, new[] { 1, 2, 5 }, new[] { 1, 4, -1 } });
 
-                yield return new TestCaseData(new[] { new[] { 1, 4, -1 },  new[] { 1, 2, 5 }, new[] { 10, 4, 11 } }, new MaxElemIncrease())
+                yield return new TestCaseData(new[] { new[] { 1, 4, -1 },  new[] { 1, 2, 5 }, new[] { 10, 4, 11 } }, new MaxElemIncreaseComparer())
                     .Returns(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 }, new[] { 10, 4, 11 } });
 
-                yield return new TestCaseData(new[] { new[] { 10, 4, 11 }, new[] { 1, 2, 5 }, new[] { 1, 4, -1 } }, new MaxElemDecrease())
+                yield return new TestCaseData(new[] { new[] { 10, 4, 11 }, new[] { 1, 2, 5 }, new[] { 1, 4, -1 } }, new MaxElemDecreaseComparer())
                     .Returns(new[] { new[] { 10, 4, 11 }, new[] { 1, 2, 5 }, new[] { 1, 4, -1 } });
 
-                yield return new TestCaseData(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 }, new[] { 10, 4, 11 } }, new MinElemIncrease())
+                yield return new TestCaseData(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 }, new[] { 10, 4, 11 } }, new MinElemIncreaseComparer())
                     .Returns(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 }, new[] { 10, 4, 11 } });
 
-                yield return new TestCaseData(new[] { new[] { 10, 4, 11 }, new[] { 1, 2, 5 }, new[] { 1, 4, -1 } }, new MinElemDecrease())
+                yield return new TestCaseData(new[] { new[] { 10, 4, 11 }, new[] { 1, 2, 5 }, new[] { 1, 4, -1 } }, new MinElemDecreaseCompararer())
                     .Returns(new[] { new[] { 10, 4, 11 }, new[] { 1, 2, 5 }, new[] { 1, 4, -1 } });
-
             }
         }
 
@@ -40,18 +39,17 @@ namespace JaggedArraySorter.Tests
         {
             get
             {
-                yield return new TestCaseData(null, new SumIncrease());
+                yield return new TestCaseData(null, new SumIncreaseComparer());
 
-                yield return new TestCaseData(null, new SumDecrease());
+                yield return new TestCaseData(null, new SumDecreaseComparer());
 
-                yield return new TestCaseData(new[] {null, new[] {1, 2, 5}, null}, new MaxElemIncrease());
+                yield return new TestCaseData(new[] {null, new[] {1, 2, 5}, null}, new MaxElemIncreaseComparer());
 
-                yield return new TestCaseData(new[] {new[] {10, 4, 11}, null, new[] {1, 4, -1}}, new MaxElemDecrease());
+                yield return new TestCaseData(new[] {new[] {10, 4, 11}, null, new[] {1, 4, -1}}, new MaxElemDecreaseComparer());
 
-                yield return new TestCaseData(new[] {new[] {1, 4, -1}, new[] {1, 2, 5}, null}, new MinElemIncrease());
+                yield return new TestCaseData(new[] {new[] {1, 4, -1}, new[] {1, 2, 5}, null}, new MinElemIncreaseComparer());
 
-                yield return new TestCaseData(null, new MinElemDecrease());
-
+                yield return new TestCaseData(null, new MinElemDecreaseCompararer());
             }
         }
 
@@ -59,18 +57,17 @@ namespace JaggedArraySorter.Tests
         {
             get
             {
-                yield return new TestCaseData(new int[0][], new SumIncrease());
+                yield return new TestCaseData(new int[0][], new SumIncreaseComparer());
 
-                yield return new TestCaseData(new int[0][], new SumDecrease());
+                yield return new TestCaseData(new int[0][], new SumDecreaseComparer());
 
-                yield return new TestCaseData(new[] {new int[0], new[] {1, 2, 5}, new int[0]}, new MaxElemIncrease());
+                yield return new TestCaseData(new[] {new int[0], new[] {1, 2, 5}, new int[0]}, new MaxElemIncreaseComparer());
 
-                yield return new TestCaseData(new[] {new[] {10, 4, 11}, new int[0], new[] {1, 4, -1}}, new MaxElemDecrease());
+                yield return new TestCaseData(new[] {new[] {10, 4, 11}, new int[0], new[] {1, 4, -1}}, new MaxElemDecreaseComparer());
 
-                yield return new TestCaseData(new[] {new[] {1, 4, -1}, new[] {1, 2, 5}, new int[0]}, new MinElemIncrease());
+                yield return new TestCaseData(new[] {new[] {1, 4, -1}, new[] {1, 2, 5}, new int[0]}, new MinElemIncreaseComparer());
 
-                yield return new TestCaseData(new int[0][], new MinElemDecrease());
-
+                yield return new TestCaseData(new int[0][], new MinElemDecreaseCompararer());
             }
         }
 

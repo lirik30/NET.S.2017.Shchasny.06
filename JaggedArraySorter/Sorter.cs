@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JaggedArraySorter
 {
     public class Sorter
     {
+        /// <summary>
+        /// Method for bubble sort of jagged array of integers
+        /// </summary>
+        /// <param name="arr">Jagged array of integers</param>
+        /// <param name="comparer">Type of compare</param>
         public static void BubbleSort(int[][] arr, IComparer comparer)
         {
             CheckArgument(arr);
@@ -32,7 +33,6 @@ namespace JaggedArraySorter
                     throw new ArgumentOutOfRangeException();
             }
         }
-
 
         private static void Swap(ref int[] lhs, ref int[] rhs)
         {

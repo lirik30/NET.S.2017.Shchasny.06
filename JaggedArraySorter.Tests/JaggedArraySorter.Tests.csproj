@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MaxElemDecrease.cs" />
-    <Compile Include="MaxElemIncrease.cs" />
-    <Compile Include="MinElemDecrease.cs" />
-    <Compile Include="MinElemIncrease.cs" />
+    <Compile Include="MaxElemDecreaseComparer.cs" />
+    <Compile Include="MaxElemIncreaseComparer.cs" />
+    <Compile Include="MinElemDecreaseCompararer.cs" />
+    <Compile Include="MinElemIncreaseComparer.cs" />
     <Compile Include="SorterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SumDecrease.cs" />
-    <Compile Include="SumIncrease.cs" />
+    <Compile Include="SumDecreaseComparer.cs" />
+    <Compile Include="SumIncreaseComparer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JaggedArraySorter\JaggedArraySorter.csproj">
