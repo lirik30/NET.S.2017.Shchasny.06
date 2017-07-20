@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using static JaggedArraySorter.Sorter;
 using NUnit.Framework;
+using static JaggedArraySorter.SorterDelegate;
 
 namespace JaggedArraySorter.Tests
 {
     [TestFixture]
-    public class SorterTests
+    class SorterDelegateTests
     {
         private static IEnumerable<TestCaseData> BubbleSort_PositiveData
         {
             get
             {
-                yield return new TestCaseData(new []{new []{1, 2, 5}, new [] { 1, 4, -1}, new [] { 10, 4, 11}}, new SumIncreaseComparer())
-                    .Returns(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 } , new[] { 10, 4, 11 } });
+                yield return new TestCaseData(new[] { new[] { 1, 2, 5 }, new[] { 1, 4, -1 }, new[] { 10, 4, 11 } }, new SumIncreaseComparer())
+                    .Returns(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 }, new[] { 10, 4, 11 } });
 
                 yield return new TestCaseData(new[] { new[] { 1, 2, 5 }, new[] { 1, 4, -1 }, new[] { 10, 4, 11 } }, new SumDecreaseComparer())
                     .Returns(new[] { new[] { 10, 4, 11 }, new[] { 1, 2, 5 }, new[] { 1, 4, -1 } });
 
-                yield return new TestCaseData(new[] { new[] { 1, 4, -1 },  new[] { 1, 2, 5 }, new[] { 10, 4, 11 } }, new MaxElemIncreaseComparer())
+                yield return new TestCaseData(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 }, new[] { 10, 4, 11 } }, new MaxElemIncreaseComparer())
                     .Returns(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 }, new[] { 10, 4, 11 } });
 
                 yield return new TestCaseData(new[] { new[] { 10, 4, 11 }, new[] { 1, 2, 5 }, new[] { 1, 4, -1 } }, new MaxElemDecreaseComparer())
@@ -40,11 +40,11 @@ namespace JaggedArraySorter.Tests
 
                 yield return new TestCaseData(null, new SumDecreaseComparer());
 
-                yield return new TestCaseData(new[] {null, new[] {1, 2, 5}, null}, new MaxElemIncreaseComparer());
+                yield return new TestCaseData(new[] { null, new[] { 1, 2, 5 }, null }, new MaxElemIncreaseComparer());
 
-                yield return new TestCaseData(new[] {new[] {10, 4, 11}, null, new[] {1, 4, -1}}, new MaxElemDecreaseComparer());
+                yield return new TestCaseData(new[] { new[] { 10, 4, 11 }, null, new[] { 1, 4, -1 } }, new MaxElemDecreaseComparer());
 
-                yield return new TestCaseData(new[] {new[] {1, 4, -1}, new[] {1, 2, 5}, null}, new MinElemIncreaseComparer());
+                yield return new TestCaseData(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 }, null }, new MinElemIncreaseComparer());
 
                 yield return new TestCaseData(null, new MinElemDecreaseCompararer());
             }
@@ -58,11 +58,11 @@ namespace JaggedArraySorter.Tests
 
                 yield return new TestCaseData(new int[0][], new SumDecreaseComparer());
 
-                yield return new TestCaseData(new[] {new int[0], new[] {1, 2, 5}, new int[0]}, new MaxElemIncreaseComparer());
+                yield return new TestCaseData(new[] { new int[0], new[] { 1, 2, 5 }, new int[0] }, new MaxElemIncreaseComparer());
 
-                yield return new TestCaseData(new[] {new[] {10, 4, 11}, new int[0], new[] {1, 4, -1}}, new MaxElemDecreaseComparer());
+                yield return new TestCaseData(new[] { new[] { 10, 4, 11 }, new int[0], new[] { 1, 4, -1 } }, new MaxElemDecreaseComparer());
 
-                yield return new TestCaseData(new[] {new[] {1, 4, -1}, new[] {1, 2, 5}, new int[0]}, new MinElemIncreaseComparer());
+                yield return new TestCaseData(new[] { new[] { 1, 4, -1 }, new[] { 1, 2, 5 }, new int[0] }, new MinElemIncreaseComparer());
 
                 yield return new TestCaseData(new int[0][], new MinElemDecreaseCompararer());
             }
@@ -109,7 +109,5 @@ namespace JaggedArraySorter.Tests
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => BubbleSort(arr, comparer.Compare));
         }
-
-
     }
 }
